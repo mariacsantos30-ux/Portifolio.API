@@ -51,7 +51,7 @@ namespace Portifolio.API.Controllers
             return Ok("Turma alterada com sucesso");
         }
 
-        [HttpDelete("{id}")]
+        [HttpDelete]
         public async Task<IActionResult> DeleteTurmas(int id)
         {
             var turma = await _context.Turmas.FindAsync(id);

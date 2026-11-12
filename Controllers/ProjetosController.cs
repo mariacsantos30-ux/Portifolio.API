@@ -52,7 +52,7 @@ namespace Portifolio.API.Controllers
                 return Ok("Projeto alterado com sucesso");
             }
 
-            [HttpDelete("{id}")]
+            [HttpDelete]
             public async Task<IActionResult> DeleteProjeto(int id)
             {
                 var projeto = await _context.Projetos.FindAsync(id);

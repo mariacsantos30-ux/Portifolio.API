@@ -56,7 +56,7 @@ namespace Portifolio.API.Controllers
             return Ok("Alunos alterados com sucesso");
         }
 
-        [HttpDelete("{id}")]
+        [HttpDelete]
         public async Task<IActionResult> DeletePr(int id)
         {
             var aluno = await _context.Alunos.FindAsync(id);
