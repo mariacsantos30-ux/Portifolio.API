@@ -1,4 +1,6 @@
-﻿namespace Portifolio.API.Models
+﻿using System.Text.Json.Serialization;
+
+namespace Portifolio.API.Models
 {
     public class Projeto
     {
@@ -6,6 +8,10 @@
         public string Descricao { get; set; }
         public string Titulo { get; set; }
         public string Link { get; set; }
+        public int AlunoId { get; set; }
+
+        [JsonIgnore]
+        public Aluno? Aluno { get; set; }
 
     }
 }
